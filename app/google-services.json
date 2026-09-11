@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "261364528046",
+    "project_id": "homeorganizer-67f3d",
+    "storage_bucket": "homeorganizer-67f3d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261364528046:android:b6ad14a75d186ca3f54e3f",
+        "android_client_info": {
+          "package_name": "com.example.homeorganizer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEilMNOfccslExNF3xtXwfNB9GZSR8So8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

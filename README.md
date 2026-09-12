@@ -1,108 +1,67 @@
-# HomeOrganizer
-## Description
+# Overview
 
-HomeOrganizer is an Android application designed to help users organize and manage information related to their home. The application uses Firebase Firestore as a cloud database to store and retrieve information.
+HomeOrganizer is an Android app I created to help keep home information organized in one place. I wanted to use this project to learn more about Kotlin, Android Studio, and how to connect an app to a cloud database.
 
-The goal of this project was to learn how to connect an Android application to a cloud database and work with data stored online.
+The app connects to Google Firebase Cloud Firestore. Right now, it can read expense information from the database and display it in the app. The app also has sections for Rooms, Tasks, Maintenance, and Expenses.
 
-HomeOrganizer can be expanded to manage information such as:
+To use the app, you start on the HomeOrganizer home screen and choose the section you want to open. You can view rooms, tasks, maintenance, or expenses. The Expenses screen connects to Firebase and shows expense information stored in Firestore. You can also use the Back button to return to the home screen.
 
-* Rooms
-* Tasks
-* Expenses
-* Maintenance
-* Household items
+My purpose for creating this app was to learn how a mobile app can connect to a cloud database and use information stored online. I also wanted to build something that could be useful for managing a home and that I can keep improving in the future.
 
-## Purpose
+[Software Demo Video](PASTE-YOUR-YOUTUBE-VIDEO-LINK-HERE)
 
-I created HomeOrganizer because I wanted to build an application that could eventually help families keep important household information organized in one place.
+# Cloud Database
 
-For this module, my main focus was learning how to use Firebase Firestore with an Android application. I learned how to connect my project to Firebase, create collections and documents, and retrieve information from the database.
+I am using **Google Firebase Cloud Firestore** for the cloud database.
 
-## Software Demo Video
+Firestore stores information using collections and documents. For HomeOrganizer, I created collections for:
 
+* expenses
+* homes
+* maintenance
+* tasks
 
+The `expenses` collection stores information such as:
 
-In this video, I demonstrate the application, show the Firebase Firestore database, and explain some of the code used to connect the Android application to the database.
+* name
+* amount
+* category
+* date
+* notes
 
-## Development Environment
+My app currently connects to the `expenses` collection and reads expense information from Firebase to display on the Expenses screen.
 
-The following tools were used to create this project:
+# Development Environment
 
-* Android Studio
+I used **Android Studio** to build the app and **Firebase Console** to create and manage the Firestore database.
+
+The app is written in **Kotlin** and uses **Jetpack Compose** for the user interface.
+
+Some of the tools and technologies I used are:
+
 * Kotlin
+* Android Studio
 * Jetpack Compose
-* Firebase
-* Firebase Firestore
+* Firebase Cloud Firestore
 * Gradle
 * Git
 * GitHub
 
-## Useful Websites
+# Useful Websites
 
-The following resources were helpful while developing this project:
+These websites helped me while working on the project:
 
 * [Firebase Documentation](https://firebase.google.com/docs)
 * [Cloud Firestore Documentation](https://firebase.google.com/docs/firestore)
 * [Android Developers](https://developer.android.com/)
 * [Kotlin Documentation](https://kotlinlang.org/docs/home.html)
 
-## Cloud Database
+# Future Work
 
-This application uses **Firebase Cloud Firestore**.
+Some things I would like to add or improve later are:
 
-The Firestore database contains collections that can be used to organize different types of home information.
-
-Some of the collections created for this project include:
-
-### expenses
-
-Stores information about household expenses.
-
-Example fields:
-
-* `name`
-* `amount`
-* `category`
-* `date`
-* `notes`
-
-## What I Learned
-
-During this project, I learned how to:
-
-* Create a Firebase project.
-* Connect Firebase to an Android Studio project.
-* Add Firebase dependencies to a Gradle project.
-* Create a Cloud Firestore database.
-* Create Firestore collections and documents.
-* Store different types of information in Firestore.
-* Retrieve information from Firestore using Kotlin.
-* Display information from a cloud database in an Android application.
-* Troubleshoot Firebase and Gradle configuration problems.
-
-One of the most important things I learned was how an Android application can communicate with a database that is hosted in the cloud instead of storing all of the information directly on the device.
-
-## Future Work
-
-There are several features I would like to add to HomeOrganizer in the future:
-
-* Add Firebase Authentication.
-* Allow each user to have their own account.
-* Create, edit, and delete tasks directly from the app.
-* Add rooms and organize household items by room.
-* Create containers inside rooms for better organization.
-* Add maintenance reminders.
-* Add expense tracking and reports.
-* Improve the user interface.
-* Add secure Firestore rules so users can only access their own information.
-
-## Author
-
-Nely Crespin
-
-Software Development Student
-
-## GitHub Repository
-
-https://github.com/nelyjc/HomeOrganizer.git
+* Connect the Rooms, Tasks, and Maintenance sections to Firebase.
+* Let users add, edit, and delete information from the app.
+* Add Firebase Authentication so users can have their own accounts.
+* Make the app look better and improve the navigation.
+* Add more detailed maintenance and expense tracking.

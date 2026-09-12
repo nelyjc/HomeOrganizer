@@ -1,5 +1,4 @@
-# HomeOrganizer# HomeOrganizer
-
+# HomeOrganizer
 ## Description
 
 HomeOrganizer is an Android application designed to help users organize and manage information related to their home. The application uses Firebase Firestore as a cloud database to store and retrieve information.

@@ -198,7 +198,7 @@ data class ExpenseItem(
 fun FirebaseExpenseScreen(
     onBack: () -> Unit
 ) {
-
+//Listener to update firebase
     val db = FirebaseFirestore.getInstance()
     val expensesCollection = db.collection("expenses")
 

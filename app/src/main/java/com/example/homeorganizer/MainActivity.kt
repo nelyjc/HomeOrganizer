@@ -55,8 +55,12 @@ fun HomeOrganizerApp() {
         "rooms" -> RoomsScreen(
             onBack = {
                 currentScreen = "home"
+            },
+            onRoomClick = { roomName ->
+                currentScreen = "room/$roomName"
             }
         )
+
 
         "tasks" -> TasksScreen(
             onBack = {
@@ -77,6 +81,7 @@ fun HomeOrganizerApp() {
         )
     }
 }
+
 
 //THIS IS THE END OF THE MAIN SCREEN**********************************************
 

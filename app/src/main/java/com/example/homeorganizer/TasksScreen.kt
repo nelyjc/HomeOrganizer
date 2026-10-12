@@ -38,9 +38,12 @@ data class tasks(
 )
 
 
+
 // Displays household tasks from Firebase.
 @Composable
-fun TasksScreen() {
+fun TasksScreen(
+    onBack: () -> Unit
+) {
 
     // Connect to Firebase Firestore.
     val db = FirebaseFirestore.getInstance()
@@ -106,15 +109,20 @@ fun TasksScreen() {
             .padding(16.dp)
     ) {
 
+        // Button to return to the Home screen.
+        Button(
+            onClick = onBack
+        ) {
+            Text("← Back")
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        // Title of the Tasks page.
         Text(
             text = "Tasks",
             style = MaterialTheme.typography.headlineMedium
         )
-
-        Spacer(
-            modifier = Modifier.height(16.dp)
-        )
-
 
         // Display every task stored in Firebase.
         tasks.forEach { task ->
